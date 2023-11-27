@@ -3,6 +3,7 @@ public class uppgifter2 {
         caseConverter("b", "c");
 
         primeNumber(4);
+        power(2,6);
     }
 
     static String caseConverter(String a, String b) {
@@ -33,5 +34,11 @@ public class uppgifter2 {
             System.out.println("The number is not Prime Number");
         }
         return true;
+    }
+
+    static double power(int base, int exponent) {
+        double result = Math.pow(base, exponent);
+        System.out.println(result);
+        return result;
     }
 }
