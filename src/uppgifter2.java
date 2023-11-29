@@ -1,9 +1,12 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class uppgifter2 {
     public static void main(String[] args) {
-        caseConverter("b", "c");
-
+        caseConverter("I", "i");
         primeNumber(4);
         power(2,6);
+        range();
     }
 
     static String caseConverter(String a, String b) {
@@ -41,4 +44,23 @@ public class uppgifter2 {
         System.out.println(result);
         return result;
     }
+
+    static double range() {
+
+        int userArray[] = new int[6];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter elements in the Array (6)");
+
+        for (int i = userArray.length-1; i >= 0; i--) {
+            userArray[i] = sc.nextInt();
+        }
+
+        Arrays.sort(userArray);
+        int result = userArray[5] - userArray[0];
+        System.out.println();
+        System.out.println("The range is " + result);
+        return result;
+
+    }
+
 }
